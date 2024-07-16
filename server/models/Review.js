@@ -3,20 +3,20 @@ import { Schema, Schema, model } from "mongoose";
 const newReview = new Schema(
   {
     useId: {
-      type: String,
-      required: true,
+      type:Schema.type.ObjectedId,
+      ref : 'User',
+      require: true
     },
     flatId: {
-      type: String,
-      required: true,
+     type:Schema.type.ObjectedId,
+     ref : 'Flat',
+     require : true
     },
     rating: {
       type: Number,
-      default: "others",
     },
     comment: {
       type: String,
-      default: "others",
     },
   },
   {
