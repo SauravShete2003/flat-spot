@@ -49,6 +49,7 @@ const flatSchema = new Schema(
     amenities: {
       type: String,
       enun: ["parking", "pool", "gym"],
+      required: true
     },
     images: {
       type: String,
