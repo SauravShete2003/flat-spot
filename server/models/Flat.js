@@ -26,7 +26,7 @@ const flatSchema = new Schema(
       type: String,
       required: true,
     },
-    zipcode: {
+    pincode: {
       type: Number,
       required: true,
     },
@@ -35,11 +35,11 @@ const flatSchema = new Schema(
       required: true,
     },
     bedrooms: {
-      type: String,
+      type: Number,
       required: true,
     },
     bathrooms: {
-      type: String,
+      type: Number,
       required: true,
     },
     area: {
@@ -51,10 +51,12 @@ const flatSchema = new Schema(
       enun: ["parking", "pool", "gym"],
       required: true,
     },
-    images: {
-      type: String,
-      required: true,
-    },
+    images: [
+      {
+        type: String,
+        required: true,
+      },
+    ],
     ownerId: {
       type: Schema.Types.ObjectId,
       ref: "Owner",
