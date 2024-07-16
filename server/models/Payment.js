@@ -3,12 +3,12 @@ import { Schema, model } from "mongoose"
 
 const NewPayment = new Schema({
   userid: {
-    type: String,
-    required: true
+    type:Schema.types.ObjectId,
+    ref:"User"
   },
   bookingid: {
-    type: String,
-    required: true
+  type:Schema.types.ObjectId,
+  ref:"User"
   },
   amount: {
     type: Number,
