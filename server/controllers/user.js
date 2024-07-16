@@ -1,14 +1,17 @@
 import User from ".././models/User.js";
 
 const postSignup = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password , phone , role , profilePicture} = req.body;
   const user = new User({
     name,
     email,
     password,
+    phone,
+    role,
+    profilePicture
   });
   try {
-    await savedUser.save();
+   const savedUser = await  user.save();
     res.json({
       message: "User created successfully",
       success: true,
