@@ -4,11 +4,13 @@ const newReview = new Schema(
   {
     useId: {
       type:Schema.type.ObjectedId,
-      ref : 'User'
+      ref : 'User',
+      require: true
     },
     flatId: {
      type:Schema.type.ObjectedId,
-     ref : 'Flat'
+     ref : 'Flat',
+     require : true
     },
     rating: {
       type: Number,
