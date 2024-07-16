@@ -4,11 +4,12 @@ import { Schema, model } from "mongoose";
 const newBooking = new Schema(
   {
     userId: {
-      type: String,
-      required: true,
+      type: Schema.Types.ObjectId,
+      ref: "User",
     },
     faltId: {
-      type: String,
+      type: Schema.Types.ObjectId,
+      ref: "Falt",
     },
     startDate: {
       type: Date,
