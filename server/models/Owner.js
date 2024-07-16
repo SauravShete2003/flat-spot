@@ -31,4 +31,4 @@ const NewOwner = new Schema({
     })
 const Owner = model("Owner", NewOwner)
 
-export default Owner
+export default Owner;

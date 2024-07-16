@@ -24,4 +24,4 @@ const NewPayment = new Schema({
   })
   const Payment = model("Payment",NewPayment)
 
-export default Payment
+export default Payment;
