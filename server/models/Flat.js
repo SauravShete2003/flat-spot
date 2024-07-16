@@ -19,7 +19,7 @@ const flatSchema = new Schema(
       required: true,
     },
     state: {
-      type: Number,
+      type: String,
       required: true,
     },
     country: {
@@ -27,7 +27,7 @@ const flatSchema = new Schema(
       required: true,
     },
     zipcode: {
-      type: String,
+      type: Number,
       required: true,
     },
     price: {
@@ -48,7 +48,7 @@ const flatSchema = new Schema(
     },
     amenities: {
       type: String,
-      enun: [parking, pool, gym],
+      enun: ["parking", "pool", "gym"],
     },
     images: {
       type: String,
