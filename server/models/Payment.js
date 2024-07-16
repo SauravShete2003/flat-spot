@@ -1,4 +1,3 @@
-import React from 'react'
 import { Schema, model } from "mongoose"
 
 const NewPayment = new Schema({
