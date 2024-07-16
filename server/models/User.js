@@ -22,7 +22,7 @@ const userSchema = new Schema(
     role: {
       type: String,
       enun: ["tenant", "admin", "owner"],
-      required: true
+      required: true,
     },
     profilePicture: {
       type: String,
