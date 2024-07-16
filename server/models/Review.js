@@ -3,12 +3,12 @@ import { Schema, Schema, model } from "mongoose";
 const newReview = new Schema(
   {
     useId: {
-      type:Schema.type.ObjectedId,
+      type:Schema.Types.ObjectId,
       ref : 'User',
       require: true
     },
     flatId: {
-     type:Schema.type.ObjectedId,
+     type:Schema.Types.ObjectId,
      ref : 'Flat',
      require : true
     },
