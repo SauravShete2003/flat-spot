@@ -1,16 +1,16 @@
-import { Schema, Schema, model } from "mongoose";
+import { Schema, model } from "mongoose";
 
 const newReview = new Schema(
   {
     useId: {
-      type:Schema.Types.ObjectId,
-      ref : 'User',
-      require: true
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      require: true,
     },
     flatId: {
-     type:Schema.Types.ObjectId,
-     ref : 'Flat',
-     require : true
+      type: Schema.Types.ObjectId,
+      ref: "Flat",
+      require: true,
     },
     rating: {
       type: Number,
@@ -23,5 +23,5 @@ const newReview = new Schema(
     timestamps: true,
   }
 );
-const Review = model('Review', newReview);
-export default Review
+const Review = model("Review", newReview);
+export default Review;
