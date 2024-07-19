@@ -3,6 +3,9 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv, { config } from "dotenv";
 dotenv.config();
+import { postflat } from "./controllers/flat.js"
+import { getBooking, postBooking, getBookings, putBooking, deleteBooking } from "./controllers/booking.js"
+
 
 const app = express();
 app.use(cors());
@@ -17,15 +20,26 @@ const connectDB = async () => {
 };
 connectDB();
 
-app.get('/',(req , res)=>{
-    res.json(
-        {
-            message:"Hello World",
-            success : true
-        }
-    )
+app.get('/', (req, res) => {
+  res.json(
+    {
+      message: "Hello World",
+      success: true
+    }
+  )
 })
 
-app.listen(PORT,()=>{
-    console.log(`server is running on port ${PORT}`)
+app.post("/flat", postflat)
+
+app.post("/booking", postBooking)
+app.get("/booking", getBooking)
+app.get("/bookings", getBookings)
+app.put("/booking", putBooking)
+app.delete("/booking", deleteBooking)
+
+
+
+app.listen(PORT, () => {
+  console.log(`server is running on port ${PORT}`)
 })
+
