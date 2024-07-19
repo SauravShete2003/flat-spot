@@ -12,11 +12,9 @@ const newBooking = new Schema(
     },
     startDate: {
       type: Date,
-      required: true,
     },
     endDate: {
       type: Date,
-      required: true,
     },
     totalPrice: {
       type: Number,
@@ -25,6 +23,7 @@ const newBooking = new Schema(
     status: {
       type: String,
       enum: ["pending", "confirmed", "canceled"],
+      default: "pending"
     },
   },
   {

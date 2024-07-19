@@ -50,6 +50,7 @@ const flatSchema = new Schema(
       type: String,
       enun: ["parking", "pool", "gym"],
       required: true,
+      default: "parking"
     },
     images: [
       {

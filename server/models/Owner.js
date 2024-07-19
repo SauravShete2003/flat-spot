@@ -1,7 +1,7 @@
 import { Schema, model } from "mongoose"
 const NewOwner = new Schema({
     fullname: {
-        String,
+        type: String,
         required: true
     },
     email: {
@@ -18,7 +18,7 @@ const NewOwner = new Schema({
     },
     flatsowned: [
         {
-            type: Schema.types.ObjectId,
+            type: Schema.Types.ObjectId,
             ref: "Flat"
         }],
     profilePicture: {
