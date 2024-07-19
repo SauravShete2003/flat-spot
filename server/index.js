@@ -3,6 +3,9 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv, { config } from "dotenv";
 dotenv.config();
+import { postflat } from "./controllers/flat.js"
+import { getBooking, postBooking, getBookings, putBooking, deleteBooking } from "./controllers/booking.js"
+
 
 import { postLogin, postSignup } from "./controllers/user.js";
 import {
@@ -33,6 +36,15 @@ const connectDB = async () => {
   }
 };
 connectDB();
+
+app.post("/flat", postflat)
+
+app.post("/booking", postBooking)
+app.get("/booking", getBooking)
+app.get("/bookings", getBookings)
+app.put("/booking", putBooking)
+app.delete("/booking", deleteBooking)
+
 
 app.get("/", (req, res) => {
   res.json({
