@@ -47,10 +47,10 @@ const flatSchema = new Schema(
       required: true,
     },
     amenities: {
-      type: String,
+      type: [String],
       enun: ["parking", "pool", "gym"],
       required: true,
-      default: "parking"
+      default: ["parking"]
     },
     images: [
       {
