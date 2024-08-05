@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 import cors from "cors";
 import dotenv, { config } from "dotenv";
 dotenv.config();
-import { postflat } from "./controllers/flat.js"
+import { postflat, getFlats, getFlatid, putFlat, deletFlat } from "./controllers/flat.js"
 import { getBooking, postBooking, getBookings, putBooking, deleteBooking } from "./controllers/booking.js"
 
 
@@ -27,7 +27,7 @@ app.post("/owner", postOwner);
 app.get("/owner", getOwner);
 app.get("/owner/flats", getOwnerFlats);
 app.delete("/owner", deleteOwner);
-app.put('/owner',updateOwner)
+app.put('/owner', updateOwner)
 
 const connectDB = async () => {
   const conn = await mongoose.connect(process.env.MONGO_URL);
@@ -38,12 +38,16 @@ const connectDB = async () => {
 connectDB();
 
 app.post("/flat", postflat)
+app.get("/flats", getFlats)
+app.get("/flat", getFlatid)
+app.put("/flat", putFlat)
+app.delete("/flat/:id", deletFlat)
 
 app.post("/booking", postBooking)
 app.get("/booking", getBooking)
 app.get("/bookings", getBookings)
 app.put("/booking", putBooking)
-app.delete("/booking", deleteBooking)
+app.delete("/booking/:id", deleteBooking)
 
 
 app.get("/", (req, res) => {
