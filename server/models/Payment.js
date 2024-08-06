@@ -1,27 +1,31 @@
-import { Schema, model } from "mongoose"
+import { Schema, model } from "mongoose";
 
-const NewPayment = new Schema({
-  userid: {
-    type:Schema.types.ObjectId,
-    ref:"User"
+const newPayment = new Schema(
+  {
+    userId: {
+      type: Schema.Types.ObjectId,
+      ref: "Owner",
+      required: true,
+    },
+    bookingId: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    amount: {
+      type: Number,
+      required: true,
+    },
+    paymentStatus: {
+      type: String,
+      enum: ["pending", "confirmed", "failed"],
+      default: "pending"
+    },
   },
-  bookingid: {
-  type:Schema.types.ObjectId,
-  ref:"User"
-  },
-  amount: {
-    type: Number,
-    required: true
-  },
-  paymentstatus: {
-    type: String,
-    enum:["pending, completed, failed"],
-    default:"pending"
-  }
-},
   {
     timestamps: true,
-  })
-  const Payment = model("Payment",NewPayment)
+  }
+);
+const Payment = model("Payment", newPayment);
 
 export default Payment;

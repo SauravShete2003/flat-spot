@@ -16,6 +16,9 @@ import {
   updateOwner
 } from "./controllers/owner.js";
 
+import { postReview, getReviews, getReview, putReview, deleteReview } from "./controllers/review.js";
+import { postPayment, getPayments,getPayment, putPayment, deletePayment } from "./controllers/payment.js";
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -45,6 +48,17 @@ app.get("/bookings", getBookings)
 app.put("/booking", putBooking)
 app.delete("/booking", deleteBooking)
 
+app.post('/review', postReview)
+app.get('/reviews', getReviews)
+app.get('/review/:id', getReview )
+app.put('/review/:id', putReview)
+app.delete('/review/:id', deleteReview)
+
+app.post('/payment', postPayment)
+app.get('/payments', getPayments)
+app.get('/payment/:id', getPayment)
+app.put('/payment/:id', putPayment)
+app.delete('/payment/:id', deletePayment)
 
 app.get("/", (req, res) => {
   res.json({
