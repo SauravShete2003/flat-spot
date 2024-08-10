@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'; 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   const router = createBrowserRouter([
@@ -9,6 +9,10 @@ function App() {
       path: "/",
       element: <h1>Home</h1>
     },
+    {
+      path : '/navbar',
+      element: <Navbar/>
+    }
   
   ]);
 
