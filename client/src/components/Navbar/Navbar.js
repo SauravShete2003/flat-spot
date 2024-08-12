@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import headingImg from "./website-logo.png";
+import headingImg from "./Flat-spot-logo.png";
 import { useState } from "react";
 import menuIcon from './menu-icon.png'
 function Navbar() {
@@ -11,7 +11,7 @@ function Navbar() {
 
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-800">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
         <img
           src={headingImg}
           onClick={handleMenu}
@@ -38,7 +38,7 @@ function Navbar() {
             <li>
               <Link
                 to={"/"}
-                className="block py-2 px-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:py-2 dark:text-white md:dark:text-blue-500"
+                className="block py-1 px-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:py-1 dark:text-white md:dark:text-blue-500"
                 aria-current="page"
                 onClick={handleMenu}
               >
@@ -48,7 +48,7 @@ function Navbar() {
             <li>
               <Link
                 to={"/about"}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-2 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-1 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-1 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 onClick={handleMenu}
               >
                 About
@@ -57,7 +57,7 @@ function Navbar() {
             <li>
               <Link
                 to={"/booking"}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-2 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-1 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-1 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 onClick={handleMenu}
               >
                 Booking
@@ -66,7 +66,7 @@ function Navbar() {
             <li>
               <Link
                 to={"/review"}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-2 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-1 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-1 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 onClick={handleMenu}
               >
                 Review
@@ -75,7 +75,7 @@ function Navbar() {
             <li>
               <Link
                 to={"/contact"}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-2 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-1 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-1 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 onClick={handleMenu}
               >
                 Contact
@@ -84,7 +84,7 @@ function Navbar() {
             <li>
               <Link
                 to={"/login"}
-                className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-2 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="block py-1 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:py-1 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 onClick={handleMenu}
               >
                 Login
